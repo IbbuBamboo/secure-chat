@@ -1,0 +1,42 @@
+<!-- /public/chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Chat Room</title>
+  <link rel="stylesheet" href="css/chat.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/chat.js"></script>
+</head>
+<body>
+  <div class="chat-room-container">
+    
+    <!-- Video Area -->
+    <div class="video-grid" id="video-grid">
+      <!-- Video tiles will be added dynamically here -->
+    </div>
+
+    <!-- Bottom Control Bar -->
+    <div class="controls-bar">
+      <button id="toggle-mic">🎙️</button>
+      <button id="toggle-camera">📷</button>
+      <button id="share-screen">🖥️</button>
+      <button id="toggle-chat">💬</button>
+      <button id="leave-room" class="leave-btn">🚪 Leave</button>
+    </div>
+
+    <!-- Chat Panel -->
+    <div class="chat-panel" id="chat-panel">
+      <div class="chat-messages" id="chat-messages"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    
+  </div>
+
+  <script src="js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* /public/css/chat.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chat-room-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.video-grid {
+  display: grid;
+  flex: 1;
+  padding: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-content: flex-start;
+  overflow-y: auto;
+  background: #181818;
+}
+
+.video-tile {
+  position: relative;
+  background-color: #2b2b2b;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.video-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* If camera is off */
+.avatar-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #00c896;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Controls Bar */
+.controls-bar {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  background: rgba(0,0,0,0.4);
+  padding: 0.75rem 1.25rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(6px);
+}
+
+.controls-bar button {
+  background: #333;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.controls-bar button:hover {
+  background: #00c896;
+  color: #000;
+}
+
+.leave-btn {
+  background: #ff4d4d;
+}
+
+.leave-btn:hover {
+  background: #ff1a1a;
+}
+
+/* Chat Panel */
+.chat-panel {
+  width: 300px;
+  max-width: 100%;
+  height: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #2a2a2a;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+#chat-form {
+  display: flex;
+  padding: 1rem;
+  gap: 0.5rem;
+  border-top: 1px solid #2a2a2a;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+#chat-form button {
+  background: #00c896;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}

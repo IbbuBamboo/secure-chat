@@ -1,0 +1,33 @@
+<!-- /public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Chat - Welcome</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <main class="welcome-container">
+    <h1>Welcome to Secure Chat</h1>
+    <div class="form-cards">
+      <!-- Create Room Section -->
+      <div class="card">
+        <h2>Create a Room</h2>
+        <input type="text" id="create-name" placeholder="Enter your name" />
+        <button id="create-btn">Create Room</button>
+      </div>
+
+      <!-- Join Room Section -->
+      <div class="card">
+        <h2>Join a Room</h2>
+        <input type="text" id="join-name" placeholder="Enter your name" />
+        <input type="text" id="join-room" placeholder="Enter room ID" />
+        <button id="join-btn">Join Room</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/entry.js"></script>
+</body>
+</html>
